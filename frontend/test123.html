@@ -1,10 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<style>
+
+
+    input[type=text] {
+        color: black;
+        padding: 12px 18px;
+        box-sizing: content-box;
+        font-size: 150%;
+        width: 40%;
+
+        border-radius: 10px;
+    }
+    input[type=password] {
+        color: black;
+        padding: 12px 18px;
+        box-sizing: content-box;
+        font-size: 150%;
+        width: 40%;
+
+        border-radius: 10px;
+    }
+      input[type=button]{
+        padding: 12px;
+    }
+    input[type=reset]
+    {
+        padding: 12px;
+    }
+    div.one{
+        padding:50px;
+        font-size: 250%;}
+    div.pp{
+        padding-top: 50px;
+        color: crimson;  }
+</style>
 <head>
-    <meta charset="UTF-8">
-    <title>test</title>
+    <title>Login page</title>
 </head>
 <body>
-
+<h1>Login Page</h1>
+<form>
+    Username<br><input type="text" placeholder="Enter Username" name="userid"/><br>
+    Password<br><input type="password" placeholder="Enter Password" name="pswrd"/><br><br>
+    <input type="button" onclick="check(this.form)" value="Login"/>
+    <input type="reset" value="Clear"/>
+</form>
+<script language="javascript">
+    function check(form) {
+        if(form.userid.value =="test" && form.pswrd.value=="test") {
+            window.open('test.html')
+        }
+        else {
+            alert("Error Password or Username")
+        }
+    }
+</script>
 </body>
 </html>
