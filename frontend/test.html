@@ -3,8 +3,17 @@
 <HEAD>
     <TITLE> Add/Remove dynamic rows in HTML table </TITLE>
     <SCRIPT language="javascript">
-        function addRow(tableID) {
 
+            function myFunction() {
+                var person = prompt("Please enter your server URL", '');
+                return person;
+
+
+                         }
+
+
+        function addRow(tableID) {
+            var newserver=myFunction();
             var table = document.getElementById(tableID);
 
             var rowCount = table.rows.length;
@@ -21,8 +30,10 @@
 
             var cell3 = row.insertCell(2);
             var element2 = document.createElement("input");
-            element2.type = "text";
-            element2.name = "txtbox[]";
+            element2.type = "button";
+            element2.value=newserver;
+            element2.name = "button[]";
+            element2.id=rowCount;
             cell3.appendChild(element2);
 
 
@@ -61,17 +72,17 @@
     <TR>
         <TD><INPUT id=abc type="checkbox" name="chk"/></TD>
         <TD> 1 </TD>
-        <TD> <INPUT id=Mytextbox type="url" value='' /> </TD>
+        <TD> <INPUT id=1 type="button" value='' /> </TD>
 
     </TR>
 </TABLE>
 <script>
     window.onload = function (){
 
-        document.getElementById("Mytextbox").value = "Krishna";
+        document.getElementById("1").value = "Krishna";
 
     }
-    document.getElementById("krishna").value = total;
+
 </script>
 
 </BODY>
