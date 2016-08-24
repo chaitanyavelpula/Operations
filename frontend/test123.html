@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>abcde</title>
+    <title>Hii</title>
+
+
+
 </head>
 <body>
 
+
+
+
+<img  id="submit" src="http://www.hindecapital.com/blog/wp-content/uploads/2012/09/Mario.jpg" width="250" height="250" style="padding-left: 250px"/>
+
+<script>
+
+    var images = new Array()
+    images[0] = "http://www.freedigitalphotos.net/images/img/homepage/87357.jpg";
+    images[1] = "https://static.pexels.com/photos/54278/pexels-photo-54278.jpeg";
+    images[2] = "https://pixabay.com/static/uploads/photo/2016/03/28/12/35/cat-1285634_960_720.png";
+    setTimeout("changeImage()", 2000);
+    var x=0;
+
+    function changeImage()
+    {
+        for(x=0; x<images.length; x++) {
+            document.getElementById("submit").src = images[x];
+        }
+    }
+
+</script>
 </body>
 </html>
